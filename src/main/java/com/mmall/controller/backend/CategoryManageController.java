@@ -6,6 +6,8 @@ import com.mmall.common.ServerResponse;
 import com.mmall.pojo.User;
 import com.mmall.service.IService.ICategoryService;
 import com.mmall.service.IService.IUserService;
+
+import com.sun.glass.ui.Application;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
+
 
 @Controller
 @RequestMapping(value="/manage/category/")
@@ -47,6 +51,7 @@ public class CategoryManageController {
            return ServerResponse.createByErrorMessage("无权限操作，需要管理员权限");
         }
     }
+
 
     /**
      * 更新品类名称
