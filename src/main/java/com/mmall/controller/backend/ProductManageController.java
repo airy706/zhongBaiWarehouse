@@ -32,6 +32,7 @@ import java.util.Map;
 public class ProductManageController{
     @Autowired
     private IUserService iUserService;
+
     @Autowired
     private IProductService iProductService;
     @Autowired
